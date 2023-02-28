@@ -87,15 +87,15 @@ class CryptoContextImpl : public Serializable {
   // algorithm used; accesses all crypto methods
   shared_ptr<LPPublicKeyEncryptionScheme<Element>> scheme;
   shared_ptr<RingGSWAccumulatorScheme> scheme2;
-  bool binfhe = false;
+  // bool binfhe = false;
 /// @brief ///////////////////////
-  std::shared_ptr<RingGSWCryptoParams> m_params;
-  // Shared pointer to the underlying additive LWE scheme
-  std::shared_ptr<LWEEncryptionScheme> m_LWEscheme;
-  // Shared pointer to the underlying RingGSW/RLWE scheme
-  std::shared_ptr<RingGSWAccumulatorScheme> m_RingGSWscheme;
-  // Struct containing the bootstrapping keys
-  RingGSWEvalKey m_BTKey;
+  // std::shared_ptr<RingGSWCryptoParams> m_params;
+  // // Shared pointer to the underlying additive LWE scheme
+  // std::shared_ptr<LWEEncryptionScheme> m_LWEscheme;
+  // // Shared pointer to the underlying RingGSW/RLWE scheme
+  // std::shared_ptr<RingGSWAccumulatorScheme> m_RingGSWscheme;
+  // // Struct containing the bootstrapping keys
+  // RingGSWEvalKey m_BTKey;
 
   /// @brief ///////////////////////
 
