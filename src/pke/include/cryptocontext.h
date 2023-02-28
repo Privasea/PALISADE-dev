@@ -86,7 +86,7 @@ class CryptoContextImpl : public Serializable {
   shared_ptr<LPCryptoParameters<Element>> params;
   // algorithm used; accesses all crypto methods
   shared_ptr<LPPublicKeyEncryptionScheme<Element>> scheme;
-  shared_ptr<RingGSWAccumulatorScheme> scheme2;
+
   // bool binfhe = false;
 /// @brief ///////////////////////
   // std::shared_ptr<RingGSWCryptoParams> m_params;
