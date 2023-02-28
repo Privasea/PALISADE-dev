@@ -1,0 +1,112 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /Users/ice/c++/palisade-development -B /Users/ice/c++/palisade-development/cmake-build-debug
+-- The C compiler identification is AppleClang 13.1.6.13160021
+-- The CXX compiler identification is AppleClang 13.1.6.13160021
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building in Debug mode
+-- BUILD_UNITTESTS:  ON
+-- BUILD_EXAMPLES:   ON
+-- BUILD_BENCHMARKS: ON
+-- BUILD_EXTRAS:     OFF
+-- BUILD_STATIC:     OFF
+-- BUILD_SHARED:     ON
+-- GIT_SUBMOD_AUTO:  ON
+-- WITH_BE2:         ON
+-- WITH_BE4:         ON
+-- WITH_NTL:         OFF
+-- WITH_TCM:         OFF
+-- WITH_INTEL_HEXL:  OFF
+-- WITH_OPENMP:      ON
+-- NATIVE_SIZE:      64
+-- CKKS_M_FACTOR:    1
+-- WITH_NATIVEOPT:   OFF
+-- WITH_COVTEST:     OFF
+-- USE_MACPORTS:     OFF
+***** INSTALL IS AT /usr/local; to change, run cmake with -DCMAKE_INSTALL_PREFIX=/your/path
+-- Architecture is x86_64
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of __int128
+-- Check size of __int128 - done
+-- Check size of uint64_t
+-- Check size of uint64_t - done
+-- NATIVEINT is set to 64
+-- MATHBACKEND is set to 2
+-- Apple Intel detected
+-- OPENMP_LIBRARIES: /usr/local/opt/libomp/lib
+-- OPENMP_INCLUDES: /usr/local/opt/libomp/include
+-- OpenMP_CXX_FLAGS: -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument
+-- OpenMP_CXX_LIB_NAMES: libomp
+-- Found OpenMP_C: -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  
+-- Found OpenMP_CXX: -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  
+-- Found OpenMP: TRUE   
+-- Found Git: /usr/bin/git (found version "2.32.1 (Apple Git-133)") 
+-- Submodule update
+Synchronizing submodule url for 'third-party/cereal'
+Synchronizing submodule url for 'third-party/google-benchmark'
+Synchronizing submodule url for 'third-party/google-test'
+Synchronizing submodule url for 'third-party/gperftools'
+-- Doxygen and dot (from graphviz) need to be installed to generate the doxygen documentation
+-- Failed to find LLVM FileCheck
+-- git version: v1.5.5-14-ge451e50e normalized to 1.5.5.14
+-- Version: 1.5.5.14
+-- Performing Test HAVE_CXX_FLAG_STD_CXX11
+-- Performing Test HAVE_CXX_FLAG_STD_CXX11 - Failed
+-- Performing Test HAVE_CXX_FLAG_STD_CXX0X
+-- Performing Test HAVE_CXX_FLAG_STD_CXX0X - Failed
+-- Performing Test HAVE_CXX_FLAG_WALL
+-- Performing Test HAVE_CXX_FLAG_WALL - Failed
+-- Performing Test HAVE_CXX_FLAG_WEXTRA
+-- Performing Test HAVE_CXX_FLAG_WEXTRA - Failed
+-- Performing Test HAVE_CXX_FLAG_WSHADOW
+-- Performing Test HAVE_CXX_FLAG_WSHADOW - Failed
+-- Performing Test HAVE_CXX_FLAG_WERROR
+-- Performing Test HAVE_CXX_FLAG_WERROR - Failed
+-- Performing Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE
+-- Performing Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE - Failed
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC - Failed
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS - Failed
+-- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32
+-- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 - Failed
+-- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING
+-- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING - Failed
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS - Failed
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED - Failed
+-- Performing Test HAVE_CXX_FLAG_WD654
+-- Performing Test HAVE_CXX_FLAG_WD654 - Failed
+-- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY
+-- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY - Failed
+-- Performing Test HAVE_CXX_FLAG_COVERAGE
+-- Performing Test HAVE_CXX_FLAG_COVERAGE - Failed
+-- Performing Test HAVE_STD_REGEX
+-- Performing Test HAVE_STD_REGEX
+-- Performing Test HAVE_STD_REGEX -- failed to compile
+-- Performing Test HAVE_GNU_POSIX_REGEX
+-- Performing Test HAVE_GNU_POSIX_REGEX
+-- Performing Test HAVE_GNU_POSIX_REGEX -- failed to compile
+-- Performing Test HAVE_POSIX_REGEX
+-- Performing Test HAVE_POSIX_REGEX
+-- Performing Test HAVE_POSIX_REGEX -- failed to compile
+CMake Error at third-party/google-benchmark/CMakeLists.txt:283 (message):
+  Failed to determine the source files for the regular expression backend
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeError.log".

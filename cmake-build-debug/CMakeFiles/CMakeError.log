@@ -1,0 +1,351 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lSystem
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lc++
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Detecting C OpenMP version failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_768e7/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_768e7.dir/build.make CMakeFiles/cmTC_768e7.dir/build
+Building C object CMakeFiles/cmTC_768e7.dir/OpenMPCheckVersion.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9 -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_768e7.dir/OpenMPCheckVersion.c.o -MF CMakeFiles/cmTC_768e7.dir/OpenMPCheckVersion.c.o.d -o CMakeFiles/cmTC_768e7.dir/OpenMPCheckVersion.c.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/FindOpenMP/OpenMPCheckVersion.c
+[1m/Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/FindOpenMP/OpenMPCheckVersion.c:3:10: [0m[0;1;31mfatal error: [0m[1m'omp.h' file not found[0m
+#include <omp.h>
+[0;1;32m         ^~~~~~~
+[0m1 error generated.
+make[1]: *** [CMakeFiles/cmTC_768e7.dir/OpenMPCheckVersion.c.o] Error 1
+make: *** [cmTC_768e7/fast] Error 2
+
+
+
+Detecting CXX OpenMP version failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e0ed4/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e0ed4.dir/build.make CMakeFiles/cmTC_e0ed4.dir/build
+Building CXX object CMakeFiles/cmTC_e0ed4.dir/OpenMPCheckVersion.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/c++   -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_e0ed4.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_e0ed4.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_e0ed4.dir/OpenMPCheckVersion.cpp.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/FindOpenMP/OpenMPCheckVersion.cpp
+[1m/Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/FindOpenMP/OpenMPCheckVersion.cpp:3:10: [0m[0;1;31mfatal error: [0m[1m'omp.h' file not found[0m
+#include <omp.h>
+[0;1;32m         ^~~~~~~
+[0m1 error generated.
+make[1]: *** [CMakeFiles/cmTC_e0ed4.dir/OpenMPCheckVersion.cpp.o] Error 1
+make: *** [cmTC_e0ed4/fast] Error 2
+
+
+
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_STD_CXX11 failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b02da/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b02da.dir/build.make CMakeFiles/cmTC_b02da.dir/build
+Building CXX object CMakeFiles/cmTC_b02da.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_CXX_FLAG_STD_CXX11  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics   -std=c++11 -MD -MT CMakeFiles/cmTC_b02da.dir/src.cxx.o -MF CMakeFiles/cmTC_b02da.dir/src.cxx.o.d -o CMakeFiles/cmTC_b02da.dir/src.cxx.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_b02da
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b02da.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b02da.dir/src.cxx.o -o cmTC_b02da 
+ld: library not found for -lomp
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_b02da] Error 1
+make: *** [cmTC_b02da/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_STD_CXX0X failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ed266/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ed266.dir/build.make CMakeFiles/cmTC_ed266.dir/build
+Building CXX object CMakeFiles/cmTC_ed266.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_CXX_FLAG_STD_CXX0X  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -std=c++0x -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics   -std=c++0x -MD -MT CMakeFiles/cmTC_ed266.dir/src.cxx.o -MF CMakeFiles/cmTC_ed266.dir/src.cxx.o.d -o CMakeFiles/cmTC_ed266.dir/src.cxx.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_ed266
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed266.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -std=c++0x -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ed266.dir/src.cxx.o -o cmTC_ed266 
+ld: library not found for -lomp
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_ed266] Error 1
+make: *** [cmTC_ed266/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WALL failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e3ebe/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e3ebe.dir/build.make CMakeFiles/cmTC_e3ebe.dir/build
+Building CXX object CMakeFiles/cmTC_e3ebe.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_CXX_FLAG_WALL  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Wall -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics   -Wall -MD -MT CMakeFiles/cmTC_e3ebe.dir/src.cxx.o -MF CMakeFiles/cmTC_e3ebe.dir/src.cxx.o.d -o CMakeFiles/cmTC_e3ebe.dir/src.cxx.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e3ebe
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3ebe.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Wall -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e3ebe.dir/src.cxx.o -o cmTC_e3ebe 
+ld: library not found for -lomp
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_e3ebe] Error 1
+make: *** [cmTC_e3ebe/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WEXTRA failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_7dffe/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_7dffe.dir/build.make CMakeFiles/cmTC_7dffe.dir/build
+Building CXX object CMakeFiles/cmTC_7dffe.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_CXX_FLAG_WEXTRA  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Wextra -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics   -Wextra -MD -MT CMakeFiles/cmTC_7dffe.dir/src.cxx.o -MF CMakeFiles/cmTC_7dffe.dir/src.cxx.o.d -o CMakeFiles/cmTC_7dffe.dir/src.cxx.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_7dffe
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7dffe.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Wextra -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_7dffe.dir/src.cxx.o -o cmTC_7dffe 
+ld: library not found for -lomp
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_7dffe] Error 1
+make: *** [cmTC_7dffe/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSHADOW failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6a43a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6a43a.dir/build.make CMakeFiles/cmTC_6a43a.dir/build
+Building CXX object CMakeFiles/cmTC_6a43a.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_CXX_FLAG_WSHADOW  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Wshadow -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics   -Wshadow -MD -MT CMakeFiles/cmTC_6a43a.dir/src.cxx.o -MF CMakeFiles/cmTC_6a43a.dir/src.cxx.o.d -o CMakeFiles/cmTC_6a43a.dir/src.cxx.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_6a43a
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a43a.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Wshadow -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_6a43a.dir/src.cxx.o -o cmTC_6a43a 
+ld: library not found for -lomp
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_6a43a] Error 1
+make: *** [cmTC_6a43a/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WERROR failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2a294/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_2a294.dir/build.make CMakeFiles/cmTC_2a294.dir/build
+Building CXX object CMakeFiles/cmTC_2a294.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_CXX_FLAG_WERROR  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Werror -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics   -Werror -MD -MT CMakeFiles/cmTC_2a294.dir/src.cxx.o -MF CMakeFiles/cmTC_2a294.dir/src.cxx.o.d -o CMakeFiles/cmTC_2a294.dir/src.cxx.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_2a294
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a294.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Werror -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_2a294.dir/src.cxx.o -o cmTC_2a294 
+ld: library not found for -lomp
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_2a294] Error 1
+make: *** [cmTC_2a294/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_29e0c/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_29e0c.dir/build.make CMakeFiles/cmTC_29e0c.dir/build
+Building CXX object CMakeFiles/cmTC_29e0c.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_CXX_FLAG_WSUGGEST_OVERRIDE  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Wsuggest-override -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics   -Wsuggest-override -MD -MT CMakeFiles/cmTC_29e0c.dir/src.cxx.o -MF CMakeFiles/cmTC_29e0c.dir/src.cxx.o.d -o CMakeFiles/cmTC_29e0c.dir/src.cxx.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_29e0c
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29e0c.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Wsuggest-override -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_29e0c.dir/src.cxx.o -o cmTC_29e0c 
+ld: library not found for -lomp
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_29e0c] Error 1
+make: *** [cmTC_29e0c/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_PEDANTIC failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d956c/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d956c.dir/build.make CMakeFiles/cmTC_d956c.dir/build
+Building CXX object CMakeFiles/cmTC_d956c.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_CXX_FLAG_PEDANTIC  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -pedantic -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics   -pedantic -MD -MT CMakeFiles/cmTC_d956c.dir/src.cxx.o -MF CMakeFiles/cmTC_d956c.dir/src.cxx.o.d -o CMakeFiles/cmTC_d956c.dir/src.cxx.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_d956c
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d956c.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -pedantic -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d956c.dir/src.cxx.o -o cmTC_d956c 
+ld: library not found for -lomp
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_d956c] Error 1
+make: *** [cmTC_d956c/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_PEDANTIC_ERRORS failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6b543/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6b543.dir/build.make CMakeFiles/cmTC_6b543.dir/build
+Building CXX object CMakeFiles/cmTC_6b543.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_CXX_FLAG_PEDANTIC_ERRORS  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -pedantic-errors -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics   -pedantic-errors -MD -MT CMakeFiles/cmTC_6b543.dir/src.cxx.o -MF CMakeFiles/cmTC_6b543.dir/src.cxx.o.d -o CMakeFiles/cmTC_6b543.dir/src.cxx.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_6b543
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6b543.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -pedantic-errors -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_6b543.dir/src.cxx.o -o cmTC_6b543 
+ld: library not found for -lomp
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_6b543] Error 1
+make: *** [cmTC_6b543/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2b721/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_2b721.dir/build.make CMakeFiles/cmTC_2b721.dir/build
+Building CXX object CMakeFiles/cmTC_2b721.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_CXX_FLAG_WSHORTEN_64_TO_32  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Wshorten-64-to-32 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics   -Wshorten-64-to-32 -MD -MT CMakeFiles/cmTC_2b721.dir/src.cxx.o -MF CMakeFiles/cmTC_2b721.dir/src.cxx.o.d -o CMakeFiles/cmTC_2b721.dir/src.cxx.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_2b721
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2b721.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Wshorten-64-to-32 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_2b721.dir/src.cxx.o -o cmTC_2b721 
+ld: library not found for -lomp
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_2b721] Error 1
+make: *** [cmTC_2b721/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_FSTRICT_ALIASING failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2a126/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_2a126.dir/build.make CMakeFiles/cmTC_2a126.dir/build
+Building CXX object CMakeFiles/cmTC_2a126.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_CXX_FLAG_FSTRICT_ALIASING  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -fstrict-aliasing -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics   -fstrict-aliasing -MD -MT CMakeFiles/cmTC_2a126.dir/src.cxx.o -MF CMakeFiles/cmTC_2a126.dir/src.cxx.o.d -o CMakeFiles/cmTC_2a126.dir/src.cxx.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_2a126
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a126.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -fstrict-aliasing -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_2a126.dir/src.cxx.o -o cmTC_2a126 
+ld: library not found for -lomp
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_2a126] Error 1
+make: *** [cmTC_2a126/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ac996/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ac996.dir/build.make CMakeFiles/cmTC_ac996.dir/build
+Building CXX object CMakeFiles/cmTC_ac996.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Wno-deprecated-declarations -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics   -Wno-deprecated-declarations -MD -MT CMakeFiles/cmTC_ac996.dir/src.cxx.o -MF CMakeFiles/cmTC_ac996.dir/src.cxx.o.d -o CMakeFiles/cmTC_ac996.dir/src.cxx.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_ac996
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac996.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Wno-deprecated-declarations -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ac996.dir/src.cxx.o -o cmTC_ac996 
+ld: library not found for -lomp
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_ac996] Error 1
+make: *** [cmTC_ac996/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WNO_DEPRECATED failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_fb646/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_fb646.dir/build.make CMakeFiles/cmTC_fb646.dir/build
+Building CXX object CMakeFiles/cmTC_fb646.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_CXX_FLAG_WNO_DEPRECATED  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Wno-deprecated -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics   -Wno-deprecated -MD -MT CMakeFiles/cmTC_fb646.dir/src.cxx.o -MF CMakeFiles/cmTC_fb646.dir/src.cxx.o.d -o CMakeFiles/cmTC_fb646.dir/src.cxx.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_fb646
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb646.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Wno-deprecated -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_fb646.dir/src.cxx.o -o cmTC_fb646 
+ld: library not found for -lomp
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_fb646] Error 1
+make: *** [cmTC_fb646/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WD654 failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_50758/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_50758.dir/build.make CMakeFiles/cmTC_50758.dir/build
+Building CXX object CMakeFiles/cmTC_50758.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_CXX_FLAG_WD654  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -wd654 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics   -wd654 -MD -MT CMakeFiles/cmTC_50758.dir/src.cxx.o -MF CMakeFiles/cmTC_50758.dir/src.cxx.o.d -o CMakeFiles/cmTC_50758.dir/src.cxx.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+clang: [0;1;31merror: [0m[1munknown argument: '-wd654'[0m
+clang: [0;1;31merror: [0m[1munknown argument: '-wd654'[0m
+make[1]: *** [CMakeFiles/cmTC_50758.dir/src.cxx.o] Error 1
+make: *** [cmTC_50758/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WTHREAD_SAFETY failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_fc350/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_fc350.dir/build.make CMakeFiles/cmTC_fc350.dir/build
+Building CXX object CMakeFiles/cmTC_fc350.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_CXX_FLAG_WTHREAD_SAFETY  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Wthread-safety -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics   -Wthread-safety -MD -MT CMakeFiles/cmTC_fc350.dir/src.cxx.o -MF CMakeFiles/cmTC_fc350.dir/src.cxx.o.d -o CMakeFiles/cmTC_fc350.dir/src.cxx.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_fc350
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc350.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  -Wthread-safety -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_fc350.dir/src.cxx.o -o cmTC_fc350 
+ld: library not found for -lomp
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_fc350] Error 1
+make: *** [cmTC_fc350/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_COVERAGE failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_0457e/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_0457e.dir/build.make CMakeFiles/cmTC_0457e.dir/build
+Building CXX object CMakeFiles/cmTC_0457e.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_CXX_FLAG_COVERAGE  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  --coverage -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fcolor-diagnostics   --coverage -MD -MT CMakeFiles/cmTC_0457e.dir/src.cxx.o -MF CMakeFiles/cmTC_0457e.dir/src.cxx.o.d -o CMakeFiles/cmTC_0457e.dir/src.cxx.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_0457e
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0457e.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++  -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument  --coverage -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_0457e.dir/src.cxx.o -o cmTC_0457e 
+ld: library not found for -lomp
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_0457e] Error 1
+make: *** [cmTC_0457e/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Detecting C OpenMP version failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_76d93/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_76d93.dir/build.make CMakeFiles/cmTC_76d93.dir/build
+Building C object CMakeFiles/cmTC_76d93.dir/OpenMPCheckVersion.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9 -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_76d93.dir/OpenMPCheckVersion.c.o -MF CMakeFiles/cmTC_76d93.dir/OpenMPCheckVersion.c.o.d -o CMakeFiles/cmTC_76d93.dir/OpenMPCheckVersion.c.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/FindOpenMP/OpenMPCheckVersion.c
+/Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/FindOpenMP/OpenMPCheckVersion.c:3:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_76d93.dir/OpenMPCheckVersion.c.o] Error 1
+make: *** [cmTC_76d93/fast] Error 2
+
+
+
+Detecting CXX OpenMP version failed with the following output:
+Change Dir: /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f44fa/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f44fa.dir/build.make CMakeFiles/cmTC_f44fa.dir/build
+Building CXX object CMakeFiles/cmTC_f44fa.dir/OpenMPCheckVersion.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/c++   -Wall -Werror -O3  -DPALISADE_VERSION=1.11.9  -Wno-unused-private-field -Wno-shift-op-parentheses -DMATHBACKEND=2 -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -Xpreprocessor -fopenmp -lomp -Wno-unused-command-line-argument -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_f44fa.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_f44fa.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_f44fa.dir/OpenMPCheckVersion.cpp.o -c /Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/FindOpenMP/OpenMPCheckVersion.cpp
+/Users/ice/c++/palisade-development/cmake-build-debug/CMakeFiles/FindOpenMP/OpenMPCheckVersion.cpp:3:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_f44fa.dir/OpenMPCheckVersion.cpp.o] Error 1
+make: *** [cmTC_f44fa/fast] Error 2
+
+
+
