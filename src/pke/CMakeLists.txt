@@ -2,6 +2,7 @@
 # CMakeLists.txt for PKE library
 #
 
+add_subdirectory(binfhe)
 # all files named *-impl.cpp are compiled to form the library
 file (GLOB PKE_SRC_FILES CONFIGURE_DEPENDS lib/*-impl.cpp lib/scheme/*/*-impl.cpp)
 

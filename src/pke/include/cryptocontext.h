@@ -38,6 +38,11 @@
 #include "utils/caller_info.h"
 #include "utils/serial.h"
 
+#include "fhew.h"
+#include "lwe.h"
+#include "ringcore.h"
+
+
 namespace lbcrypto {
 
 // Backend-specific settings for CKKS
@@ -87,15 +92,15 @@ class CryptoContextImpl : public Serializable {
   // algorithm used; accesses all crypto methods
   shared_ptr<LPPublicKeyEncryptionScheme<Element>> scheme;
 
-  // bool binfhe = false;
 /// @brief ///////////////////////
-  // std::shared_ptr<RingGSWCryptoParams> m_params;
-  // // Shared pointer to the underlying additive LWE scheme
-  // std::shared_ptr<LWEEncryptionScheme> m_LWEscheme;
-  // // Shared pointer to the underlying RingGSW/RLWE scheme
-  // std::shared_ptr<RingGSWAccumulatorScheme> m_RingGSWscheme;
-  // // Struct containing the bootstrapping keys
-  // RingGSWEvalKey m_BTKey;
+  bool binfile;
+  std::shared_ptr<RingGSWCryptoParams> m_params;
+  // Shared pointer to the underlying additive LWE scheme
+  std::shared_ptr<LWEEncryptionScheme> m_LWEscheme;
+  // Shared pointer to the underlying RingGSW/RLWE scheme
+  std::shared_ptr<RingGSWAccumulatorScheme> m_RingGSWscheme;
+  // Struct containing the bootstrapping keys
+  RingGSWEvalKey m_BTKey;
 
   /// @brief ///////////////////////
 

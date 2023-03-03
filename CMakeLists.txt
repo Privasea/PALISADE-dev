@@ -502,6 +502,8 @@ if(GIT_SUBMOD_AUTO AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
     endif()
 endif()
 
+include_directories( ${CMAKE_SOURCE_DIR}/src/pke/binfhe/include)
+
 find_package (Doxygen QUIET COMPONENTS dot)
 if (DOXYGEN_FOUND)
 
@@ -709,10 +711,9 @@ add_custom_target( clobber
 
 if( BUILD_UNITTESTS )
 	add_custom_target( testall
-		DEPENDS core_tests pke_tests  binfhe_tests
+		DEPENDS core_tests pke_tests 
 		COMMAND echo core: && unittest/core_tests -t || true
-		COMMAND echo pke: && unittest/pke_tests -t || true
-		COMMAND echo binfhe: && unittest/binfhe_tests -t )
+		COMMAND echo pke: && unittest/pke_tests -t )
 endif()
 
 if (BUILD_EXAMPLES)
