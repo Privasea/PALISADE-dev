@@ -688,7 +688,7 @@ endif()
 ### add each of the subdirs of src
 add_subdirectory(src/core)
 add_subdirectory(src/pke)
-add_subdirectory(src/pke/binfhe)
+### add_subdirectory(src/pke/binfhe)
 
 ### build the google test handlers
 ###if( BUILD_UNITTESTS )
