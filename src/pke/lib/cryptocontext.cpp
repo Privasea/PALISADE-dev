@@ -26,6 +26,233 @@
 
 namespace lbcrypto {
 
+//! BinFHE
+template <typename Element>
+void CryptoContextImpl<Element>::GenerateBinFHEContext(uint32_t n, uint32_t N,
+                                          const NativeInteger &q,
+                                          const NativeInteger &Q,
+                                          const NativeInteger &qKS,
+                                          double std,
+                                          uint32_t baseKS, uint32_t baseG,
+                                          uint32_t baseR, BINFHEMETHOD method) {
+  auto lweparams = std::make_shared<LWECryptoParams>(n, N, q, Q, qKS, std, baseKS);
+  m_params =
+      std::make_shared<RingGSWCryptoParams>(lweparams, baseG, baseR, method);
+}
+
+template <typename Element>
+void CryptoContextImpl<Element>::GenerateBinFHEContext(BINFHEPARAMSET set,
+                                          BINFHEMETHOD method) {
+  shared_ptr<LWECryptoParams> lweparams;
+  NativeInteger Q;
+  switch (set) {
+    case TOY:
+      Q = PreviousPrime<NativeInteger>(FirstPrime<NativeInteger>(27, 1024),
+                                       1024);
+      lweparams = std::make_shared<LWECryptoParams>(64, 512, 512, Q, Q, 3.19, 25);
+      m_params =
+          std::make_shared<RingGSWCryptoParams>(lweparams, 1 << 9, 32, method);
+      break;
+    case MEDIUM:
+      Q = PreviousPrime<NativeInteger>(FirstPrime<NativeInteger>(28, 2048),
+                                       2048);
+      lweparams = std::make_shared<LWECryptoParams>(422, 1024, 1024, Q, 1 << 14, 3.19, 1 << 7);
+      m_params =
+          std::make_shared<RingGSWCryptoParams>(lweparams, 1 << 10, 32, method);
+    case STD128_AP:
+      Q = PreviousPrime<NativeInteger>(FirstPrime<NativeInteger>(27, 2048),
+                                       2048);
+      lweparams =
+          std::make_shared<LWECryptoParams>(512, 1024, 1024, Q, 1 << 14, 3.19, 1 << 7);
+      m_params =
+          std::make_shared<RingGSWCryptoParams>(lweparams, 1 << 9, 32, method);
+      break;
+    case STD128_APOPT:
+      Q = PreviousPrime<NativeInteger>(FirstPrime<NativeInteger>(27, 2048),
+                                       2048);
+      lweparams =
+          std::make_shared<LWECryptoParams>(502, 1024, 1024, Q, 1 << 14, 3.19, 1 << 7);
+      m_params =
+          std::make_shared<RingGSWCryptoParams>(lweparams, 1 << 9, 32, method);
+      break;
+    case STD128:
+      Q = PreviousPrime<NativeInteger>(FirstPrime<NativeInteger>(27, 2048),
+                                       2048);
+      lweparams =
+          std::make_shared<LWECryptoParams>(512, 1024, 1024, Q, 1 << 14, 3.19, 1 << 7);
+      m_params =
+          std::make_shared<RingGSWCryptoParams>(lweparams, 1 << 7, 32, method);
+      break;
+    case STD128_OPT:
+      Q = PreviousPrime<NativeInteger>(FirstPrime<NativeInteger>(27, 2048),
+                                       2048);
+      lweparams =
+          std::make_shared<LWECryptoParams>(502, 1024, 1024, Q, 1 << 14, 3.19, 1 << 7);
+      m_params =
+          std::make_shared<RingGSWCryptoParams>(lweparams, 1 << 7, 32, method);
+      break;
+    case STD192:
+      Q = PreviousPrime<NativeInteger>(FirstPrime<NativeInteger>(37, 4096),
+                                       4096);
+      lweparams =
+          std::make_shared<LWECryptoParams>(1024, 2048, 1024, Q, 1 << 19, 3.19, 28);
+      m_params =
+          std::make_shared<RingGSWCryptoParams>(lweparams, 1 << 13, 32, method);
+      break;
+    case STD192_OPT:
+      Q = PreviousPrime<NativeInteger>(FirstPrime<NativeInteger>(37, 4096),
+                                       4096);
+      lweparams =
+          std::make_shared<LWECryptoParams>(805, 2048, 1024, Q, 1 << 15, 3.19, 1 << 5);
+      m_params =
+          std::make_shared<RingGSWCryptoParams>(lweparams, 1 << 13, 32, method);
+      break;
+    case STD256:
+      Q = PreviousPrime<NativeInteger>(FirstPrime<NativeInteger>(29, 4096),
+                                       4096);
+      lweparams =
+          std::make_shared<LWECryptoParams>(1024, 2048, 2048, Q, 1 << 14, 3.19, 1 << 7);
+      m_params =
+          std::make_shared<RingGSWCryptoParams>(lweparams, 1 << 8, 46, method);
+      break;
+    case STD256_OPT:
+      Q = PreviousPrime<NativeInteger>(FirstPrime<NativeInteger>(29, 4096),
+                                       4096);
+      lweparams =
+          std::make_shared<LWECryptoParams>(990, 2048, 2048, Q, 1 << 14, 3.19, 1 << 7);
+      m_params =
+          std::make_shared<RingGSWCryptoParams>(lweparams, 1 << 8, 46, method);
+      break;
+    case STD128Q:
+      Q = PreviousPrime<NativeInteger>(FirstPrime<NativeInteger>(50, 4096),
+                                       4096);
+      lweparams =
+          std::make_shared<LWECryptoParams>(1024, 2048, 1024, Q, 1 << 25, 3.19, 32);
+      m_params =
+          std::make_shared<RingGSWCryptoParams>(lweparams, 1 << 25, 32, method);
+      break;
+    case STD128Q_OPT:
+      Q = PreviousPrime<NativeInteger>(FirstPrime<NativeInteger>(50, 4096),
+                                       4096);
+      lweparams =
+          std::make_shared<LWECryptoParams>(585, 2048, 1024, Q, 1 << 15, 3.19, 32);
+      m_params =
+          std::make_shared<RingGSWCryptoParams>(lweparams, 1 << 25, 32, method);
+      break;
+    case STD192Q:
+      Q = PreviousPrime<NativeInteger>(FirstPrime<NativeInteger>(35, 4096),
+                                       4096);
+      lweparams =
+          std::make_shared<LWECryptoParams>(1024, 2048, 1024, Q, 1 << 17, 3.19, 64);
+      m_params =
+          std::make_shared<RingGSWCryptoParams>(lweparams, 1 << 12, 32, method);
+      break;
+    case STD192Q_OPT:
+      Q = PreviousPrime<NativeInteger>(FirstPrime<NativeInteger>(35, 4096),
+                                       4096);
+      lweparams =
+          std::make_shared<LWECryptoParams>(875, 2048, 1024, Q, 1 << 15, 3.19, 1 << 5);
+      m_params =
+          std::make_shared<RingGSWCryptoParams>(lweparams, 1 << 12, 32, method);
+      break;
+    case STD256Q:
+      Q = PreviousPrime<NativeInteger>(FirstPrime<NativeInteger>(27, 4096),
+                                       4096);
+      lweparams =
+          std::make_shared<LWECryptoParams>(2048, 2048, 2048, Q, 1 << 16, 3.19, 16);
+      m_params =
+          std::make_shared<RingGSWCryptoParams>(lweparams, 1 << 7, 46, method);
+      break;
+    case STD256Q_OPT:
+      Q = PreviousPrime<NativeInteger>(FirstPrime<NativeInteger>(27, 4096),
+                                       4096);
+      lweparams =
+          std::make_shared<LWECryptoParams>(1225, 2048, 1024, Q, 1 << 16, 3.19, 16);
+      m_params =
+          std::make_shared<RingGSWCryptoParams>(lweparams, 1 << 7, 32, method);
+      break;
+    case SIGNED_MOD_TEST:
+      Q = PreviousPrime<NativeInteger>(FirstPrime<NativeInteger>(28, 2048),
+                                       2048);
+      lweparams =
+          std::make_shared<LWECryptoParams>(512, 1024, 512, Q, Q, 3.19, 25);
+      m_params =
+          std::make_shared<RingGSWCryptoParams>(lweparams, 1 << 7, 23, method);
+      break;
+    default:
+      std::string errMsg = "ERROR: No such parameter set exists for FHEW.";
+      PALISADE_THROW(config_error, errMsg);
+  }
+}
+
+template <typename Element>
+LWEPrivateKey CryptoContextImpl<Element>::KeyGen() const {
+  return m_LWEscheme->KeyGen(m_params->GetLWEParams());
+}
+
+template <typename Element>
+LWEPrivateKey CryptoContextImpl<Element>::KeyGenN() const {
+  return m_LWEscheme->KeyGenN(m_params->GetLWEParams());
+}
+
+template <typename Element>
+LWECiphertext CryptoContextImpl<Element>::Encrypt(ConstLWEPrivateKey sk,
+                                     const LWEPlaintext &m,
+                                     BINFHEOUTPUT output) const {
+  if (output == FRESH) {
+    return m_LWEscheme->Encrypt(m_params->GetLWEParams(), sk, m);
+  } else {
+    auto ct = m_LWEscheme->Encrypt(m_params->GetLWEParams(), sk, m);
+    return m_RingGSWscheme->Bootstrap(m_params, m_BTKey, ct, m_LWEscheme);
+  }
+}
+
+template <typename Element>
+void CryptoContextImpl<Element>::Decrypt(ConstLWEPrivateKey sk, ConstLWECiphertext ct,
+                            LWEPlaintext *result) const {
+  return m_LWEscheme->Decrypt(m_params->GetLWEParams(), sk, ct, result);
+}
+
+template <typename Element>
+std::shared_ptr<LWESwitchingKey> CryptoContextImpl<Element>::KeySwitchGen(
+    ConstLWEPrivateKey sk, ConstLWEPrivateKey skN) const {
+  return m_LWEscheme->KeySwitchGen(m_params->GetLWEParams(), sk, skN);
+}
+
+template <typename Element>
+void CryptoContextImpl<Element>::BTKeyGen(ConstLWEPrivateKey sk) {
+  m_BTKey = m_RingGSWscheme->KeyGen(m_params, m_LWEscheme, sk);
+  return;
+}
+
+template <typename Element>
+LWECiphertext CryptoContextImpl<Element>::EvalBinGate(const BINGATE gate,
+                                         ConstLWECiphertext ct1,
+                                         ConstLWECiphertext ct2) const {
+  return m_RingGSWscheme->EvalBinGate(m_params, gate, m_BTKey, ct1, ct2,
+                                      m_LWEscheme);
+}
+
+template <typename Element>
+LWECiphertext CryptoContextImpl<Element>::Bootstrap(ConstLWECiphertext ct1) const {
+  return m_RingGSWscheme->Bootstrap(m_params, m_BTKey, ct1, m_LWEscheme);
+}
+
+template <typename Element>
+LWECiphertext CryptoContextImpl<Element>::EvalNOT(ConstLWECiphertext ct) const {
+  return m_RingGSWscheme->EvalNOT(m_params, ct);
+}
+
+template <typename Element>
+LWECiphertext CryptoContextImpl<Element>::EvalConstant(bool value) const {
+  return m_LWEscheme->NoiselessEmbedding(m_params->GetLWEParams(), value);
+}
+
+//! BinFHE
+
+
+
+
 // Initialize global config variable
 bool SERIALIZE_PRECOMPUTE = true;
 
