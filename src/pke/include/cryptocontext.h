@@ -573,12 +573,12 @@ class CryptoContextImpl : public Serializable {
    */
   CryptoContextImpl(LPCryptoParameters<Element>* params = nullptr,
                     LPPublicKeyEncryptionScheme<Element>* scheme = nullptr,
-                    const string& schemeId = "Not", bool binfhe = false) {
+                    const string& schemeId = "Not") {
     this->params.reset(params);
     this->scheme.reset(scheme);
     this->m_keyGenLevel = 0;
     this->m_schemeId = schemeId;
-    this->binfile = binfhe;
+    this->binfile = false;
   }
 
   /**
@@ -588,12 +588,13 @@ class CryptoContextImpl : public Serializable {
    */
   CryptoContextImpl(shared_ptr<LPCryptoParameters<Element>> params,
                     shared_ptr<LPPublicKeyEncryptionScheme<Element>> scheme,
-                    const string& schemeId = "Not", bool binfhe = false) {
+                    const string& schemeId = "Not") {
     this->params = params;
     this->scheme = scheme;
     this->m_keyGenLevel = 0;
     this->m_schemeId = schemeId;
-    this->binfile = binfhe;
+    this->binfile = false;
+
   }
 
   /**
@@ -605,7 +606,26 @@ class CryptoContextImpl : public Serializable {
     scheme = c.scheme;
     this->m_keyGenLevel = 0;
     this->m_schemeId = c.m_schemeId;
-    this->binfile = c.binfile;
+    this->binfile = false;
+
+  }
+
+  /**
+   * generate a binfhe object by GenerateBinFHEContext
+  */
+  CryptoContextImpl(uint32_t n, uint32_t N, const NativeInteger &q, const NativeInteger &Q, const NativeInteger &qKS, double std, uint32_t baseKS, uint32_t baseG, uint32_t baseR, BINFHEMETHOD method = GINX) {
+
+    this->binfile = true;
+    this->GenerateBinFHEContext( n,  N, q, Q, qKS, std, baseKS, baseG, baseR, method);
+
+  }
+
+  /**
+   * generate a binfhe object by GenerateBinFHEContext
+  */
+  CryptoContextImpl(BINFHEPARAMSET set, BINFHEMETHOD method = GINX){
+    this->binfile = true;
+    this->GenerateBinFHEContext(set, method);
   }
 
   /**
@@ -2835,7 +2855,16 @@ class CryptoContextImpl : public Serializable {
     // does NOT exist, add this to the cache of all contexts
   }
 
-  virtual std::string SerializedObjectName() const { return "CryptoContext"; }
+  virtual std::string SerializedObjectName() const { 
+    //!BinFHE_start
+    if(this->binfile){
+      return "RingGSWBTKey";
+    }
+    else{
+      return "CryptoObject";}
+    //! BinFHE_end
+  }
+  
   static uint32_t SerializedVersion() { return 1; }
 };
 
@@ -2922,13 +2951,7 @@ class CryptoObject {
         );
   }
 
-  std::string SerializedObjectName() const { 
-    //!BinFHE_start
-    if(1){
-      return "RingGSWBTKey";
-    }
-    else{
-      return "CryptoObject";} }
+  std::string SerializedObjectName() const {  return "CryptoObject";} 
   static uint32_t SerializedVersion() { return 1; }
 
 
