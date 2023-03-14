@@ -21,6 +21,7 @@ set_property(TARGET pkeobj PROPERTY POSITION_INDEPENDENT_CODE 1)
 
 if( BUILD_SHARED )
 	add_dependencies(pkeobj PALISADEcore)
+	add_dependencies(pkeobj PALISADEbinfhe)
 	add_library (PALISADEpke SHARED $<TARGET_OBJECTS:pkeobj>)
 	set_property(TARGET PALISADEpke PROPERTY VERSION ${PKE_VERSION})
 	set_property(TARGET PALISADEpke PROPERTY SOVERSION ${PKE_VERSION_MAJOR})
@@ -45,8 +46,8 @@ install(DIRECTORY include/
 add_custom_target( allpke )
 
 if( BUILD_SHARED )
-	set (PKELIBS PUBLIC PALISADEpke PUBLIC PALISADEcore ${THIRDPARTYLIBS} ${OpenMP_CXX_FLAGS})
-	target_link_libraries (PALISADEpke PUBLIC PALISADEcore ${THIRDPARTYLIBS} ${OpenMP_CXX_FLAGS})
+	set (PKELIBS PUBLIC PALISADEpke PUBLIC PALISADEcore PALISADEbinfhe ${THIRDPARTYLIBS} ${OpenMP_CXX_FLAGS})
+	target_link_libraries (PALISADEpke PUBLIC PALISADEcore PALISADEbinfhe ${THIRDPARTYLIBS} ${OpenMP_CXX_FLAGS})
 	add_dependencies( allpke PALISADEpke)
 endif()
 
