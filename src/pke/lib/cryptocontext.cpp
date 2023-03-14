@@ -186,7 +186,7 @@ namespace lbcrypto {
     }
 
     template<typename Element>
-    LWEPrivateKey CryptoContextImpl<Element>::KeyGen() const {
+    LWEPrivateKey CryptoContextImpl<Element>::KeyGen02() const {
         return m_LWEscheme->KeyGen(m_params->GetLWEParams());
     }
 

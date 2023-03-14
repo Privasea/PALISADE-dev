@@ -470,7 +470,7 @@ namespace lbcrypto {
          *
          * @return a shared pointer to the secret key
          */
-        LWEPrivateKey KeyGen() const;
+        LWEPrivateKey KeyGen02() const;
 
         /**
          * Generates a secret key used in bootstrapping
